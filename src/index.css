@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Just+Me+Again+Down+Here&display=swap');
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-brand-sky: #76a9d4;
+  --color-brand-violet: #8a7dc3;
+}
+
+:root {
+  line-height: 1.5;
+  font-weight: 400;
+  color: white;
+  font-family: 'Inter', sans-serif;
+}
+
+button {
+    cursor: pointer;
+}
+
+body {
+  margin: 0;
+}

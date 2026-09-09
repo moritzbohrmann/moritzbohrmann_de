@@ -1,0 +1,36 @@
+import Navigation from "./Navigation"
+
+function App() {
+  return (
+    <div className="w-full min-h-screen overflow-x-hidden bg-linear-to-br from-brand-sky to-brand-violet dark:bg-linear-to-br dark:from-slate-950 dark:to-slate-900 flex flex-col transition-colors duration-300">
+      <header className="h-24">
+        <Navigation />
+      </header>
+
+      <main className="flex flex-1 flex-col overflow-hidden">
+        <div className="flex flex-col m-auto py-20 sm:py-28 lg:py-48 px-4 text-center sm:text-left">
+          <span className="whitespace-nowrap">
+            <span className="font-['Just_Me_Again_Down_Here'] text-6xl sm:text-8xl lg:text-9xl text-white">Moritz</span>
+            <span className="text-4xl sm:text-6xl lg:text-8xl font-bold text-white">, Informatiker.</span>
+          </span>
+          <span className="mt-4 text-xl sm:text-2xl lg:text-4xl text-white">Ich erstelle Websites für mittelständige Unternehmen.</span>
+        </div>
+
+        <svg
+          viewBox="0 0 1440 160"
+          preserveAspectRatio="none"
+          className="block w-full h-20 sm:h-24 transition-colors duration-300"
+          aria-hidden="true"
+        >
+          <path
+            d="M0,96 C180,150 360,40 540,92 C720,144 900,52 1080,90 C1260,128 1440,46 1440,96 L1440,160 L0,160 Z"
+            className="fill-white dark:fill-slate-950 transition-[fill] duration-300"
+          />
+        </svg>
+        <div className="-mt-1 flex-1 bg-white dark:bg-slate-950 transition-colors duration-300"></div>
+      </main>
+    </div>
+  )
+}
+
+export default App
