@@ -1,4 +1,7 @@
+import Button from "./components/Button"
 import Navigation from "./Navigation"
+import phoneIcon from './assets/icons/phone.svg'
+import projectsIcon from './assets/icons/projects.svg'
 
 function App() {
   return (
@@ -8,12 +11,16 @@ function App() {
       </header>
 
       <main className="flex flex-1 flex-col overflow-hidden">
-        <div className="flex flex-col m-auto py-20 sm:py-28 lg:py-48 px-4 text-center sm:text-left">
+        <div className="flex flex-col m-auto py-20 sm:py-28 lg:py-48 px-4 text-center sm:text-left gap-2">
           <span className="whitespace-nowrap">
             <span className="font-['Just_Me_Again_Down_Here'] text-6xl sm:text-8xl lg:text-9xl text-white">Moritz</span>
             <span className="text-4xl sm:text-6xl lg:text-8xl font-bold text-white">, Informatiker.</span>
           </span>
-          <span className="mt-4 text-xl sm:text-2xl lg:text-4xl text-white">Ich erstelle Websites für mittelständige Unternehmen.</span>
+          <span className="max-w-md sm:max-w-none text-xl sm:text-2xl lg:text-4xl text-white">Ich erstelle Websites für mittelständige Unternehmen.</span>
+          <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+            <Button icon={phoneIcon}>0175 8101841</Button>
+            <Button icon={projectsIcon}>Projekte</Button>
+          </div>
         </div>
 
         <svg
