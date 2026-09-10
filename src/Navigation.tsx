@@ -33,7 +33,7 @@ function Navigation() {
             <nav className="hidden md:flex h-14 px-6 lg:px-8 bg-white dark:bg-slate-800 m-auto rounded-4xl drop-shadow-md/20 border-2 border-gray-200 dark:border-slate-700 transition-colors duration-300">
                 <ul className="h-full flex items-center gap-6 lg:gap-12 text-sm lg:text-base text-black dark:text-white hover:cursor-pointer">
                     <li>Über mich</li>
-                    <li>Projekte</li>
+                    <li>Portfolio</li>
                     <li>Fähigkeiten</li>
                     <li>Kontakt</li>
                 </ul>

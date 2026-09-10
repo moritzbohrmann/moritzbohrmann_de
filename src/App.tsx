@@ -5,7 +5,7 @@ import ProjectsIcon from './assets/icons/projects.svg'
 
 function App() {
   return (
-    <div className="w-full min-h-screen overflow-x-hidden bg-linear-to-br from-brand-sky to-brand-violet dark:bg-linear-to-br dark:from-slate-950 dark:to-slate-900 flex flex-col transition-colors duration-300">
+    <div className="w-full min-h-dvh overflow-x-hidden bg-linear-to-br from-brand-sky to-brand-violet dark:bg-linear-to-br dark:from-slate-950 dark:to-slate-900 flex flex-col transition-colors duration-300">
       <header className="h-24">
         <Navigation />
       </header>
@@ -18,8 +18,8 @@ function App() {
           </span>
           <span className="max-w-md sm:max-w-none text-xl sm:text-2xl lg:text-4xl text-white">Ich erstelle Websites für mittelständige Unternehmen.</span>
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-            <Button icon={PhoneIcon}>0175 9212952</Button>
-            <Button icon={ProjectsIcon}>Projekte</Button>
+            <Button icon={PhoneIcon}>Kontaktieren</Button>
+            <Button icon={ProjectsIcon}>Zum Portfolio</Button>
           </div>
         </div>
 
