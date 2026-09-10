@@ -34,7 +34,14 @@ function Navigation() {
       </span>
       <nav className="m-auto hidden h-14 rounded-4xl border-2 border-gray-200 bg-white px-6 drop-shadow-md/20 transition-colors duration-300 md:flex lg:px-8 dark:border-slate-700 dark:bg-slate-800">
         <ul className="flex h-full items-center gap-6 text-sm text-black hover:cursor-pointer lg:gap-12 lg:text-base dark:text-white">
-          <li>Über mich</li>
+          <li
+            onClick={() => {
+              const element = document.getElementById("about");
+              element?.scrollIntoView({ behavior: "smooth", block: "start" });
+            }}
+          >
+            Über mich
+          </li>
           <li>Portfolio</li>
           <li>Fähigkeiten</li>
           <li>Kontakt</li>

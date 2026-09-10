@@ -2,6 +2,7 @@ import Button from "./components/Button";
 import Navigation from "./Navigation";
 import PhoneIcon from "./assets/icons/phone.svg";
 import ProjectsIcon from "./assets/icons/projects.svg";
+import AboutMe from "./AboutMe";
 
 function App() {
   return (
@@ -40,7 +41,9 @@ function App() {
             className="fill-white transition-[fill] duration-300 dark:fill-slate-950"
           />
         </svg>
-        <div className="-mt-1 flex-1 bg-white transition-colors duration-300 dark:bg-slate-950"></div>
+        <div className="-mt-1 flex-1 bg-white transition-colors duration-300 dark:bg-slate-950">
+          <AboutMe />
+        </div>
       </main>
     </div>
   );
