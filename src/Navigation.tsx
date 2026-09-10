@@ -44,7 +44,7 @@ function Navigation() {
                 aria-label="Toggle theme"
                 onClick={toggleTheme}
             >
-                <img src={isDark ? sunIcon : moonIcon} alt={isDark ? 'Light mode' : 'Dark mode'} className="size-5 dark:invert" />
+                <img src={isDark ? moonIcon : sunIcon} alt={isDark ? 'Light mode' : 'Dark mode'} className="size-5 dark:invert" />
             </button>
         </div>
     )
