@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 
 function AboutMe() {
   return (
-    <section id="about" className="my-20 flex px-16">
+    <section id="about" className="my-20 flex px-8 sm:px-16">
       <motion.div
         className="m-auto flex w-fit flex-col justify-start gap-2 text-black md:gap-4 dark:text-white"
         initial={{ opacity: 0, y: 24 }}
