@@ -2,9 +2,9 @@ import { motion } from "motion/react";
 
 function AboutMe() {
   return (
-    <section id="about" className="my-20 flex px-8 sm:px-16">
+    <section id="about" className="my-20 w-full px-8 sm:px-16">
       <motion.div
-        className="m-auto flex w-fit flex-col justify-start gap-2 text-black md:gap-4 dark:text-white"
+        className="flex w-full flex-col justify-start gap-2 text-black md:gap-4 dark:text-white"
         initial={{ opacity: 0, y: 24 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: false, amount: 0.25 }}
@@ -13,7 +13,7 @@ function AboutMe() {
         <span className="w-fit bg-cyan-500 text-4xl font-bold text-white sm:text-5xl lg:text-6xl dark:bg-green-400 dark:text-black">
           Über mich
         </span>
-        <span className="text-md border-r-4 border-cyan-500 pr-4 [word-spacing:0.5em] sm:text-lg lg:w-4xl lg:max-w-4xl dark:border-green-400">
+        <span className="text-md border-r-4 border-cyan-500 pr-4 [word-spacing:0.5em] sm:text-lg dark:border-green-400">
           Ich bin 34 Jahre alt und arbeite als Softwareentwickler in einem
           mittelständischen Unternehmen im Bereich Webtechnologien. Ich lebe
           seit mehreren Jahren in einer mittelgroßen Stadt und habe einen

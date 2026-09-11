@@ -16,16 +16,19 @@ const getInitialTheme = () => {
   return window.matchMedia("(prefers-color-scheme: dark)").matches;
 };
 
+const scrollTo = (id: string) => {
+  const element = document.getElementById(id);
+  element?.scrollIntoView({ behavior: "smooth", block: "start" });
+};
+
 const navbarElements = [
   {
     title: "Über mich",
-    action: () => {
-      const element = document.getElementById("about");
-      element?.scrollIntoView({ behavior: "smooth", block: "start" });
-    },
+    action: () => scrollTo("about"),
   },
   {
     title: "Portfolio",
+    action: () => scrollTo("projects"),
   },
   {
     title: "Fähigkeiten",

@@ -3,11 +3,12 @@ import Navigation from "./Navigation";
 import PhoneIcon from "./assets/icons/phone.svg";
 import ProjectsIcon from "./assets/icons/projects.svg";
 import AboutMe from "./AboutMe";
+import Portfolio from "./Portfolio";
 
 function App() {
   return (
     <div className="from-brand-sky to-brand-violet flex min-h-dvh w-full flex-col overflow-x-hidden bg-linear-to-br transition-colors duration-300 dark:bg-linear-to-br dark:from-slate-950 dark:to-slate-900">
-      <header className="fixed h-24 w-full">
+      <header className="fixed z-20 h-24 w-full">
         <Navigation />
       </header>
       <main className="mt-24 flex flex-1 flex-col overflow-hidden">
@@ -40,8 +41,11 @@ function App() {
             className="fill-white transition-[fill] duration-300 dark:fill-slate-950"
           />
         </svg>
-        <div className="-mt-1 flex-1 bg-white transition-colors duration-300 dark:bg-slate-950">
-          <AboutMe />
+        <div className="-mt-1 flex flex-1 justify-center bg-white transition-colors duration-300 dark:bg-slate-950">
+          <div className="flex flex-col gap-8 lg:w-full lg:max-w-6xl 2xl:max-w-7xl">
+            <AboutMe />
+            <Portfolio />
+          </div>
         </div>
       </main>
     </div>
