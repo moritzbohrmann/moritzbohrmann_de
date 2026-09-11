@@ -58,7 +58,7 @@ function Navigation() {
   };
 
   return (
-    <div className="relative flex h-full w-full items-center justify-between gap-6 px-4 sm:px-8 lg:px-16">
+    <div className="flex h-full w-full items-center justify-between gap-6 px-4 backdrop-blur-2xl sm:px-8 lg:px-16">
       <span className="font-['Just_Me_Again_Down_Here'] text-3xl whitespace-nowrap text-white sm:text-4xl">
         Moritz Bohrmann
       </span>

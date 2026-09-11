@@ -7,11 +7,10 @@ import AboutMe from "./AboutMe";
 function App() {
   return (
     <div className="from-brand-sky to-brand-violet flex min-h-dvh w-full flex-col overflow-x-hidden bg-linear-to-br transition-colors duration-300 dark:bg-linear-to-br dark:from-slate-950 dark:to-slate-900">
-      <header className="h-24">
+      <header className="fixed h-24 w-full">
         <Navigation />
       </header>
-
-      <main className="flex flex-1 flex-col overflow-hidden">
+      <main className="mt-24 flex flex-1 flex-col overflow-hidden">
         <div className="m-auto flex flex-col gap-2 px-4 py-20 text-center sm:py-28 sm:text-left lg:py-48">
           <span className="whitespace-nowrap">
             <span className="font-['Just_Me_Again_Down_Here'] text-6xl text-white sm:text-8xl lg:text-9xl">
