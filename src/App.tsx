@@ -38,10 +38,10 @@ function App() {
         >
           <path
             d="M0,96 C180,150 360,40 540,92 C720,144 900,52 1080,90 C1260,128 1440,46 1440,96 L1440,160 L0,160 Z"
-            className="fill-white transition-[fill] duration-300 dark:fill-slate-950"
+            className="fill-slate-100 transition-[fill] duration-300 dark:fill-slate-950"
           />
         </svg>
-        <div className="-mt-1 flex flex-1 justify-center bg-white transition-colors duration-300 dark:bg-slate-950">
+        <div className="-mt-1 flex flex-1 justify-center bg-slate-100 transition-colors duration-300 dark:bg-slate-950">
           <div className="flex flex-col gap-8 lg:w-full lg:max-w-6xl 2xl:max-w-7xl">
             <AboutMe />
             <Portfolio />

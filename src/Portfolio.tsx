@@ -4,22 +4,22 @@ import ArrowRight from "./assets/icons/arrow-right.svg";
 import { projects, type Project } from "./data/projects";
 
 const Card = ({ title, description, images, link }: Project) => (
-  <li className="flex h-full w-full flex-col gap-2 rounded-4xl border-2 border-slate-700 bg-slate-800 px-4 py-4 transition-all hover:scale-105 hover:rotate-2">
+  <li className="flex h-full w-full flex-col gap-2 rounded-4xl border-2 border-slate-200 bg-white px-4 py-4 text-slate-900 shadow-sm transition-all hover:scale-[1.02] hover:-rotate-1 dark:border-slate-700 dark:bg-slate-800 dark:text-white">
     {images && images.length > 0 ? (
       <img
         src={images[0]}
         alt={title}
-        className="min-h-32 w-full rounded-2xl border-2 border-slate-700 object-cover xl:min-h-42"
+        className="min-h-32 w-full rounded-2xl border-2 border-slate-200 object-cover xl:min-h-42 dark:border-slate-700"
       />
     ) : (
-      <div className="flex min-h-32 w-full rounded-2xl bg-slate-700 object-cover xl:min-h-42">
-        <span className="m-auto text-5xl font-bold text-slate-800 xl:text-6xl">
+      <div className="flex min-h-32 w-full rounded-2xl bg-slate-200 object-cover xl:min-h-42 dark:bg-slate-700">
+        <span className="m-auto text-5xl font-bold text-slate-400 xl:text-6xl dark:text-slate-800">
           ?
         </span>
       </div>
     )}
     <span className="text-xl font-bold xl:text-2xl">{title}</span>
-    <span className="xl:text-md text-sm text-wrap [word-spacing:0.5em]">
+    <span className="xl:text-md text-sm text-wrap text-slate-600 [word-spacing:0.5em] dark:text-slate-300">
       {description}
     </span>
     <div className="mt-auto flex justify-end">
@@ -46,7 +46,7 @@ function Portfolio() {
         viewport={{ once: false, amount: 0.25 }}
         transition={{ duration: 0.4, ease: "easeOut" }}
       >
-        <span className="w-fit bg-amber-500 text-4xl font-bold text-white sm:text-5xl lg:text-6xl dark:bg-indigo-400 dark:text-black">
+        <span className="w-fit bg-violet-700 text-4xl font-bold text-white sm:text-5xl lg:text-6xl dark:bg-indigo-400 dark:text-black">
           Projekte
         </span>
         <ul className="mt-2 grid grid-cols-1 gap-4 overflow-visible md:mt-0 md:grid-cols-2 2xl:grid-cols-3 2xl:gap-6">

@@ -10,10 +10,10 @@ function AboutMe() {
         viewport={{ once: false, amount: 0.25 }}
         transition={{ duration: 0.4, ease: "easeOut" }}
       >
-        <span className="w-fit bg-cyan-500 text-4xl font-bold text-white sm:text-5xl lg:text-6xl dark:bg-green-400 dark:text-black">
+        <span className="w-fit bg-sky-700 text-4xl font-bold text-white sm:text-5xl lg:text-6xl dark:bg-green-400 dark:text-black">
           Über mich
         </span>
-        <span className="text-md border-r-4 border-cyan-500 pr-4 [word-spacing:0.5em] sm:text-lg dark:border-green-400">
+        <span className="text-md border-r-4 border-sky-700 pr-4 [word-spacing:0.5em] sm:text-lg dark:border-green-400">
           Ich bin 34 Jahre alt und arbeite als Softwareentwickler in einem
           mittelständischen Unternehmen im Bereich Webtechnologien. Ich lebe
           seit mehreren Jahren in einer mittelgroßen Stadt und habe einen
