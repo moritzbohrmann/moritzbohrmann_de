@@ -1,36 +1,14 @@
 import { motion } from "motion/react";
 import Button from "./components/Button";
 import ArrowRight from "./assets/icons/arrow-right.svg";
-import BetterDartOnlineImage from "./assets/images/portfolio/betterdartonline.png";
+import { projects, type Project } from "./data/projects";
 
-type Project = {
-  title: string;
-  description: string;
-  images?: string | string[];
-  link: string;
-};
-
-const projects = [
-  {
-    title: "BetterDartOnline v1.0",
-    description:
-      "Betterdartonline ist eine Web-App für Dartspieler, um Profile mit individuellen Einstellungen (x01, Cricket, Split) zu verwalten, Gegner aus einer Spielerliste herauszufordern und an Turnieren teilzunehmen.",
-    images: [BetterDartOnlineImage],
-    link: "",
-  },
-  {
-    title: "BetterDartOnline v2.0",
-    description: "",
-    link: "",
-  },
-];
-
-const Card = (project: Project) => (
+const Card = ({ title, description, images, link }: Project) => (
   <li className="flex h-full w-full flex-col gap-2 rounded-4xl border-2 border-slate-700 bg-slate-800 px-4 py-4 transition-all hover:scale-105 hover:rotate-2">
-    {project.images ? (
+    {images && images.length > 0 ? (
       <img
-        src={project.images[0]}
-        alt=""
+        src={images[0]}
+        alt={title}
         className="min-h-32 w-full rounded-2xl border-2 border-slate-700 object-cover xl:min-h-42"
       />
     ) : (
@@ -40,12 +18,17 @@ const Card = (project: Project) => (
         </span>
       </div>
     )}
-    <span className="text-xl font-bold xl:text-2xl">{project.title}</span>
+    <span className="text-xl font-bold xl:text-2xl">{title}</span>
     <span className="xl:text-md text-sm text-wrap [word-spacing:0.5em]">
-      {project.description}
+      {description}
     </span>
     <div className="mt-auto flex justify-end">
-      <Button icon={ArrowRight} className="self-end rounded-2xl" />
+      <Button
+        icon={ArrowRight}
+        className="self-end rounded-2xl"
+        disabled={!link}
+        title={link ? `Mehr zu ${title}` : "Noch keine Details verfügbar"}
+      />
     </div>
   </li>
 );
