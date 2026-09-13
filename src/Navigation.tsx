@@ -18,7 +18,15 @@ const getInitialTheme = () => {
 
 const scrollTo = (id: string) => {
   const element = document.getElementById(id);
-  element?.scrollIntoView({ behavior: "smooth", block: "start" });
+
+  if (!element) return;
+
+  const y = element.getBoundingClientRect().top + window.scrollY - 120;
+
+  window.scrollTo({
+    top: y,
+    behavior: "smooth",
+  });
 };
 
 const navbarElements = [
