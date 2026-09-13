@@ -6,8 +6,8 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --color-brand-sky: #76a9d4;
-  --color-brand-violet: #8a7dc3;
+  --color-brand-sky: #4aa3d8;
+  --color-brand-violet: #6848d7;
 }
 
 html,

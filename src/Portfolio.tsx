@@ -1,24 +1,50 @@
 import { motion } from "motion/react";
 import Button from "./components/Button";
 import ArrowRight from "./assets/icons/arrow-right.svg";
-import { projects, type Project } from "./data/projects";
+import { projects, type Project, getTechnologyIcon } from "./data/projects";
 
-const Card = ({ title, description, images, link }: Project) => (
+const Card = ({
+  title,
+  version,
+  description,
+  images,
+  link,
+  technologies,
+}: Project) => (
   <li className="flex h-full w-full flex-col gap-2 rounded-4xl border-2 border-slate-200 bg-white px-4 py-4 text-slate-900 shadow-sm transition-all hover:scale-[1.02] hover:-rotate-1 dark:border-slate-700 dark:bg-slate-800 dark:text-white">
     {images && images.length > 0 ? (
       <img
         src={images[0]}
         alt={title}
-        className="min-h-32 w-full rounded-2xl border-2 border-slate-200 object-cover xl:min-h-42 dark:border-slate-700"
+        className="aspect-video w-full rounded-2xl border-2 border-slate-200 object-cover dark:border-slate-700"
       />
     ) : (
-      <div className="flex min-h-32 w-full rounded-2xl bg-slate-200 object-cover xl:min-h-42 dark:bg-slate-700">
-        <span className="m-auto text-5xl font-bold text-slate-400 xl:text-6xl dark:text-slate-800">
+      <div className="flex aspect-video w-full items-center justify-center rounded-2xl bg-slate-200 dark:bg-slate-700">
+        <span className="text-5xl font-bold text-slate-400 xl:text-6xl dark:text-slate-800">
           ?
         </span>
       </div>
     )}
-    <span className="text-xl font-bold xl:text-2xl">{title}</span>
+    <div className="flex flex-col justify-between gap-2">
+      <span>
+        <span className="text-xl font-bold xl:text-2xl">{title}</span>
+        {version !== undefined && (
+          <span className="ml-2 text-sm text-slate-500 dark:text-slate-400">
+            v{version.toFixed(1)}
+          </span>
+        )}
+      </span>
+      <div className="flex flex-wrap items-end gap-2">
+        {technologies.map((t) => (
+          <img
+            src={getTechnologyIcon(t)}
+            alt=""
+            className="size-6 rounded-sm"
+            title={t}
+          />
+        ))}
+      </div>
+    </div>
     <span className="xl:text-md text-sm text-wrap text-slate-600 [word-spacing:0.5em] dark:text-slate-300">
       {description}
     </span>
@@ -46,7 +72,7 @@ function Portfolio() {
         viewport={{ once: false, amount: 0.25 }}
         transition={{ duration: 0.4, ease: "easeOut" }}
       >
-        <span className="w-fit bg-violet-700 text-4xl font-bold text-white sm:text-5xl lg:text-6xl dark:bg-indigo-400 dark:text-black">
+        <span className="w-fit bg-slate-600 text-4xl font-bold text-white sm:text-5xl lg:text-6xl dark:bg-indigo-400 dark:text-black">
           Projekte
         </span>
         <ul className="mt-2 grid grid-cols-1 gap-4 overflow-visible md:mt-0 md:grid-cols-2 2xl:grid-cols-3 2xl:gap-6">
