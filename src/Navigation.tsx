@@ -3,6 +3,7 @@ import sunIcon from "./assets/icons/sun.svg";
 import moonIcon from "./assets/icons/moon.svg";
 import BurgerIcon from "./assets/icons/burger.svg";
 import Button from "./components/Button";
+import { scrollTo } from "./utils";
 
 const getInitialTheme = () => {
   if (typeof window === "undefined") return false;
@@ -14,19 +15,6 @@ const getInitialTheme = () => {
   }
 
   return window.matchMedia("(prefers-color-scheme: dark)").matches;
-};
-
-const scrollTo = (id: string) => {
-  const element = document.getElementById(id);
-
-  if (!element) return;
-
-  const y = element.getBoundingClientRect().top + window.scrollY - 120;
-
-  window.scrollTo({
-    top: y,
-    behavior: "smooth",
-  });
 };
 
 const navbarElements = [

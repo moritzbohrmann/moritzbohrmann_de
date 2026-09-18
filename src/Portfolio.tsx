@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 import Button from "./components/Button";
 import ArrowRight from "./assets/icons/arrow-right.svg";
-import { projects, type Project, getTechnologyIcon } from "./data/projects";
+import { projects, type Project, technologyIcons } from "./data/projects";
 
 const Card = ({
   title,
@@ -37,7 +37,7 @@ const Card = ({
       <div className="flex flex-wrap items-end gap-2">
         {technologies.map((t) => (
           <img
-            src={getTechnologyIcon(t)}
+            src={technologyIcons[t]}
             alt=""
             className="size-6 rounded-sm"
             title={t}
