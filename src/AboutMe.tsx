@@ -23,7 +23,7 @@ function AboutMe() {
               "Seit 2023 - Bachelor of Science in Kerninformatik",
             ].map((event) => (
               <div className="flex min-h-16 items-center gap-4">
-                <div className="flex size-5 rounded-full border-3 border-slate-100 bg-slate-600 dark:border-[#020617] dark:bg-white"></div>
+                <div className="flex min-h-5 min-w-5 rounded-full border-3 border-slate-100 bg-slate-600 dark:border-[#020617] dark:bg-white"></div>
                 <span>{event}</span>
               </div>
             ))}
