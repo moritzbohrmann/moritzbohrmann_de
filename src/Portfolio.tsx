@@ -69,10 +69,10 @@ function Portfolio() {
         className="flex w-full flex-col justify-start gap-2 text-black md:gap-4 dark:text-white"
         initial={{ opacity: 0, y: 24 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: false, amount: 0.25 }}
+        viewport={{ once: false, amount: 0.05 }}
         transition={{ duration: 0.4, ease: "easeOut" }}
       >
-        <span className="w-fit bg-slate-600 text-4xl font-bold text-white sm:text-5xl lg:text-6xl dark:bg-indigo-400 dark:text-black">
+        <span className="w-fit bg-slate-400 text-4xl font-bold text-white sm:text-5xl lg:text-6xl dark:bg-indigo-400 dark:text-black">
           Projekte
         </span>
         <ul className="mt-2 grid grid-cols-1 gap-4 overflow-visible md:mt-0 md:grid-cols-2 2xl:grid-cols-3 2xl:gap-6">

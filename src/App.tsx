@@ -4,6 +4,7 @@ import PhoneIcon from "./assets/icons/phone.svg";
 import ProjectsIcon from "./assets/icons/projects.svg";
 import AboutMe from "./AboutMe";
 import Portfolio from "./Portfolio";
+import { scrollTo } from "./utils";
 
 function App() {
   return (
@@ -26,7 +27,9 @@ function App() {
           </span>
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">
             <Button icon={PhoneIcon}>Kontaktieren</Button>
-            <Button icon={ProjectsIcon}>Zum Portfolio</Button>
+            <Button icon={ProjectsIcon} onClick={() => scrollTo("projects")}>
+              Zum Portfolio
+            </Button>
           </div>
         </div>
 
