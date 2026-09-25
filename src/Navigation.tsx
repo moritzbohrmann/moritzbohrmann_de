@@ -77,7 +77,7 @@ function Navigation() {
       <div
         id="dropdown"
         className={[
-          "absolute top-24 right-0 left-0 z-10 w-full border-b-2 border-slate-400 bg-slate-100 bg-linear-to-br text-sm transition-all duration-300 md:hidden dark:border-slate-700 dark:bg-slate-950",
+          "absolute top-24 right-0 left-0 z-10 w-full border-b-2 border-gray-200 bg-slate-100 bg-linear-to-br text-sm transition-all duration-300 md:hidden dark:border-slate-700 dark:bg-slate-950",
           isMenuOpen
             ? "visible opacity-100"
             : "pointer-events-none invisible opacity-0",
