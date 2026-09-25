@@ -18,16 +18,16 @@ function About() {
           <div className="absolute inset-y-2 left-2 my-2 w-1 rounded-full bg-slate-400 dark:bg-white"></div>
           <div className="relative flex flex-col">
             {career.map((event) => (
-              <div className="flex min-h-16 items-center gap-4">
+              <div key={event} className="flex min-h-16 items-center gap-4">
                 <div className="flex min-h-5 min-w-5 rounded-full border-3 border-slate-100 bg-slate-600 dark:border-[#020617] dark:bg-white"></div>
                 <span>{event}</span>
               </div>
             ))}
           </div>
         </div>
-        <span className="text-md border-r-4 border-slate-400 pr-4 [word-spacing:0.5em] sm:text-lg dark:border-green-400">
+        <p className="text-md border-r-4 border-slate-400 pr-4 [word-spacing:0.5em] sm:text-lg dark:border-green-400">
           {profileSummary}
-        </span>
+        </p>
       </motion.div>
     </section>
   );

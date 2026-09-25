@@ -51,7 +51,7 @@ export const projects: Project[] = [
     description:
       "Betterdartonline ist eine Web-App für Dartspieler, um Profile mit individuellen Einstellungen (x01, Cricket, Split) zu verwalten, Gegner aus einer Spielerliste herauszufordern und an Turnieren teilzunehmen.",
     images: [BetterDartOnlineImage],
-    link: "",
+    link: "https://moritzbohrmann.github.io/betterdartonline/",
     technologies: ["react", "javascript", "redux", "axios", "tailwind"],
   },
   {

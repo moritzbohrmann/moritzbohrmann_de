@@ -45,16 +45,18 @@ const Card = ({
         ))}
       </div>
     </div>
-    <span className="xl:text-md text-sm text-wrap text-slate-600 [word-spacing:0.5em] dark:text-slate-300">
+    <p className="xl:text-md text-sm text-wrap text-slate-600 [word-spacing:0.5em] dark:text-slate-300">
       {description}
-    </span>
+    </p>
     <div className="mt-auto flex justify-end">
-      <Button
-        icon={ArrowRight}
-        className="self-end rounded-2xl"
-        disabled={!link}
-        title={link ? `Mehr zu ${title}` : "Noch keine Details verfügbar"}
-      />
+      <a href={link}>
+        <Button
+          icon={ArrowRight}
+          className="self-end rounded-2xl"
+          disabled={!link}
+          title={link ? `${title} besuchen` : "Noch keine Details verfügbar"}
+        />
+      </a>
     </div>
   </li>
 );
