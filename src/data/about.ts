@@ -11,9 +11,9 @@ export const profileSummary = `Ich bin 34 Jahre alt und arbeite als Softwareentw
           Kommunikation im Team wichtig, und ich arbeite gerne an Aufgaben, bei
           denen ich eigenständig Lösungen entwickeln kann.`;
 
-export const career = [
-  "Ab 2010 - Brukterer Grundschule",
-  "Ab 2014 - Albert Einstein Realschule (FOR-Q)",
-  "Ab 2020 - Städtische Gesamtschule Kamen (Abitur)",
-  "Seit 2023 - Bachelor of Science in Kerninformatik",
+export const education = [
+  { year: "2010", text: "Brukterer Grundschule" },
+  { year: "2014", text: "Albert-Einstein-Realschule (FOR-Q)" },
+  { year: "2020", text: "Städtische Gesamtschule Kamen, Abitur" },
+  { year: "2023", text: "Bachelor of Science in Kerninformatik" },
 ];

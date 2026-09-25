@@ -3,21 +3,9 @@ import sunIcon from "./assets/icons/sun.svg";
 import moonIcon from "./assets/icons/moon.svg";
 import BurgerIcon from "./assets/icons/burger.svg";
 import Button from "./components/Button";
-import { scrollTo } from "./utils";
+import { getInitialTheme, scrollTo } from "./utils";
 
-const getInitialTheme = () => {
-  if (typeof window === "undefined") return false;
-
-  const savedTheme = localStorage.getItem("theme");
-
-  if (savedTheme) {
-    return savedTheme === "dark";
-  }
-
-  return window.matchMedia("(prefers-color-scheme: dark)").matches;
-};
-
-const navbarElements = [
+const items = [
   {
     title: "Über mich",
     action: () => scrollTo("about"),
@@ -57,13 +45,17 @@ function Navigation() {
   };
 
   return (
-    <div className="flex h-full w-full items-center justify-between gap-6 px-4 backdrop-blur-2xl sm:px-8 lg:px-16">
-      <span className="font-['Just_Me_Again_Down_Here'] text-3xl whitespace-nowrap text-white sm:text-4xl">
+    <div
+      className={`flex h-full w-full items-center justify-between gap-6 px-4 backdrop-blur-2xl transition-colors duration-300 sm:px-8 lg:px-16 ${isMenuOpen ? "bg-slate-100 dark:bg-slate-950" : "bg-transparent"}`}
+    >
+      <span
+        className={`font-['Just_Me_Again_Down_Here'] text-3xl whitespace-nowrap sm:text-4xl ${isMenuOpen && "text-black"} dark:text-white`}
+      >
         Moritz Bohrmann
       </span>
       <nav className="m-auto hidden h-14 rounded-4xl border-2 border-gray-200 bg-white px-6 drop-shadow-md/20 transition-colors duration-300 md:flex lg:px-8 dark:border-slate-700 dark:bg-slate-800">
         <ul className="flex h-full items-center gap-6 text-sm text-black hover:cursor-pointer lg:gap-12 lg:text-base dark:text-white">
-          {navbarElements.map((e) => (
+          {items.map((e) => (
             <li key={e.title} onClick={() => handleNavItemClick(e.action)}>
               {e.title}
             </li>
@@ -83,19 +75,22 @@ function Navigation() {
         />
       </div>
       <div
+        id="dropdown"
         className={[
-          "from-brand-sky to-brand-violet absolute top-24 right-0 left-0 z-10 w-full border-b-2 bg-linear-to-br text-sm transition-all duration-300 md:hidden dark:border-slate-700 dark:bg-linear-to-br dark:from-slate-950 dark:to-slate-900",
-          isMenuOpen ? "opacity-100" : "pointer-events-none hidden opacity-0",
+          "absolute top-24 right-0 left-0 z-10 w-full border-b-2 border-slate-400 bg-slate-100 bg-linear-to-br text-sm transition-all duration-300 md:hidden dark:border-slate-700 dark:bg-slate-950",
+          isMenuOpen
+            ? "visible opacity-100"
+            : "pointer-events-none invisible opacity-0",
         ].join(" ")}
       >
         <ul className="flex flex-col items-center">
-          {navbarElements.map((e) => (
+          {items.map(({ title, action }) => (
             <li
-              key={`${e.title}-mobile`}
-              onClick={() => handleNavItemClick(e.action)}
-              className="w-full py-6 text-center text-white hover:cursor-pointer"
+              key={`${title}-mobile`}
+              onClick={() => handleNavItemClick(action)}
+              className="w-full py-6 text-center text-black hover:cursor-pointer dark:text-white"
             >
-              {e.title}
+              {title}
             </li>
           ))}
         </ul>

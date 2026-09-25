@@ -45,7 +45,7 @@ const Card = ({
         ))}
       </div>
     </div>
-    <p className="xl:text-md text-sm text-wrap text-slate-600 [word-spacing:0.5em] dark:text-slate-300">
+    <p className="xl:text-md text-sm leading-relaxed text-wrap text-slate-600 dark:text-slate-300">
       {description}
     </p>
     <div className="mt-auto flex justify-end">
@@ -71,7 +71,7 @@ function Portfolio() {
         className="flex w-full flex-col justify-start gap-2 text-black md:gap-4 dark:text-white"
         initial={{ opacity: 0, y: 24 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: false, amount: 0.05 }}
+        viewport={{ once: true, amount: 0.05 }}
         transition={{ duration: 0.4, ease: "easeOut" }}
       >
         <span className="w-fit bg-slate-400 text-4xl font-bold text-white sm:text-5xl lg:text-6xl dark:bg-indigo-400 dark:text-black">
