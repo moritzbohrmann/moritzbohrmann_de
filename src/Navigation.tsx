@@ -46,7 +46,7 @@ function Navigation() {
 
   return (
     <div
-      className={`flex h-full w-full items-center justify-between gap-6 px-4 backdrop-blur-2xl transition-colors duration-300 sm:px-8 lg:px-16 ${isMenuOpen ? "bg-slate-100 dark:bg-slate-950" : "bg-transparent"}`}
+      className={`flex h-full w-full items-center justify-between gap-6 px-4 backdrop-blur-2xl transition-colors duration-300 ease-in-out sm:px-8 lg:px-16 ${isMenuOpen ? "bg-slate-100 dark:bg-slate-950" : "bg-transparent"}`}
     >
       <span
         className={`font-['Just_Me_Again_Down_Here'] text-3xl whitespace-nowrap sm:text-4xl ${isMenuOpen && "text-black"} dark:text-white`}
@@ -77,7 +77,7 @@ function Navigation() {
       <div
         id="dropdown"
         className={[
-          "absolute top-24 right-0 left-0 z-10 w-full border-b-2 border-gray-200 bg-slate-100 bg-linear-to-br text-sm transition-all duration-300 md:hidden dark:border-slate-700 dark:bg-slate-950",
+          "absolute top-24 right-0 left-0 z-10 w-full border-b-2 border-gray-200 bg-slate-100 text-sm transition-[background-color,border-color,opacity,visibility] duration-300 ease-in-out md:hidden dark:border-slate-700 dark:bg-slate-950",
           isMenuOpen
             ? "visible opacity-100"
             : "pointer-events-none invisible opacity-0",
