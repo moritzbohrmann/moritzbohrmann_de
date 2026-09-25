@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
+import { career, profileSummary } from "./data/about";
 
-function AboutMe() {
+function About() {
   return (
     <section id="about" className="my-20 w-full px-8 sm:px-16">
       <motion.div
@@ -16,12 +17,7 @@ function AboutMe() {
         <div className="relative">
           <div className="absolute inset-y-2 left-2 my-2 w-1 rounded-full bg-slate-400 dark:bg-white"></div>
           <div className="relative flex flex-col">
-            {[
-              "Ab 2010 - Brukterer Grundschule",
-              "Ab 2014 - Albert Einstein Realschule (FOR-Q)",
-              "Ab 2020 - Städtische Gesamtschule Kamen (Abitur)",
-              "Seit 2023 - Bachelor of Science in Kerninformatik",
-            ].map((event) => (
+            {career.map((event) => (
               <div className="flex min-h-16 items-center gap-4">
                 <div className="flex min-h-5 min-w-5 rounded-full border-3 border-slate-100 bg-slate-600 dark:border-[#020617] dark:bg-white"></div>
                 <span>{event}</span>
@@ -30,22 +26,11 @@ function AboutMe() {
           </div>
         </div>
         <span className="text-md border-r-4 border-slate-400 pr-4 [word-spacing:0.5em] sm:text-lg dark:border-green-400">
-          Ich bin 34 Jahre alt und arbeite als Softwareentwickler in einem
-          mittelständischen Unternehmen im Bereich Webtechnologien. Ich lebe
-          seit mehreren Jahren in einer mittelgroßen Stadt und habe einen
-          Abschluss in Informatik. In meiner Freizeit beschäftige ich mich gerne
-          mit neuen Programmiersprachen, gehe regelmäßig laufen und lese
-          technische Fachliteratur sowie gelegentlich Romane. Ich würde mich
-          selbst als strukturiert, lösungsorientiert und neugierig auf neue
-          Themen beschreiben. Beruflich habe ich mehrere Jahre Erfahrung in der
-          Entwicklung von Webanwendungen gesammelt und arbeite aktuell an
-          Projekten rund um moderne Frontend-Frameworks. Mir ist klare
-          Kommunikation im Team wichtig, und ich arbeite gerne an Aufgaben, bei
-          denen ich eigenständig Lösungen entwickeln kann.
+          {profileSummary}
         </span>
       </motion.div>
     </section>
   );
 }
 
-export default AboutMe;
+export default About;

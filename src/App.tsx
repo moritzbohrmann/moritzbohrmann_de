@@ -2,7 +2,7 @@ import Button from "./components/Button";
 import Navigation from "./Navigation";
 import PhoneIcon from "./assets/icons/phone.svg";
 import ProjectsIcon from "./assets/icons/projects.svg";
-import AboutMe from "./AboutMe";
+import About from "./About";
 import Portfolio from "./Portfolio";
 import { scrollTo } from "./utils";
 
@@ -46,7 +46,7 @@ function App() {
         </svg>
         <div className="-mt-1 flex flex-1 justify-center bg-slate-100 transition-colors duration-300 dark:bg-slate-950">
           <div className="flex flex-col gap-8 lg:w-full lg:max-w-6xl 2xl:max-w-7xl">
-            <AboutMe />
+            <About />
             <Portfolio />
           </div>
         </div>
